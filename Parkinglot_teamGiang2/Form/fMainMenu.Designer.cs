@@ -62,7 +62,7 @@ namespace QLBaiGiuXe
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(202, 636);
+            this.panelMenu.Size = new System.Drawing.Size(202, 693);
             this.panelMenu.TabIndex = 0;
             // 
             // btnQLBX
@@ -160,7 +160,7 @@ namespace QLBaiGiuXe
             this.panelTitleBar.Location = new System.Drawing.Point(202, 0);
             this.panelTitleBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1033, 64);
+            this.panelTitleBar.Size = new System.Drawing.Size(1071, 64);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -182,7 +182,7 @@ namespace QLBaiGiuXe
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16.2F);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(455, 22);
+            this.lblTitle.Location = new System.Drawing.Point(474, 22);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(97, 38);
             this.lblTitle.TabIndex = 0;
@@ -195,7 +195,7 @@ namespace QLBaiGiuXe
             this.panelDesktopPane.Location = new System.Drawing.Point(202, 64);
             this.panelDesktopPane.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(1033, 572);
+            this.panelDesktopPane.Size = new System.Drawing.Size(1071, 629);
             this.panelDesktopPane.TabIndex = 2;
             this.panelDesktopPane.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPane_Paint);
             // 
@@ -203,7 +203,7 @@ namespace QLBaiGiuXe
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(173, 127);
+            this.pictureBox1.Location = new System.Drawing.Point(192, 155);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(677, 332);
@@ -216,7 +216,7 @@ namespace QLBaiGiuXe
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1235, 636);
+            this.ClientSize = new System.Drawing.Size(1273, 693);
             this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
