@@ -63,13 +63,33 @@ namespace QLBaiGiuXe
 
         private void cbLoaiXe_TextChanged(object sender, EventArgs e)
         {
-            cbBaiXe.Enabled = true;
+            
             cbBaiXe.DataSource = null;
             int maLoaiXe;
             Int32.TryParse(cbLoaiXe.SelectedValue.ToString(), out maLoaiXe);
-            cbBaiXe.DataSource = BaiXeDAO.Instence.getListBaiXeNonVe(maLoaiXe) ;
+            if (maLoaiXe == 0)
+            {
+                maLoaiXe = (from c in LoaiXeDAO.Instence.getListLoaiXe() select c.MaLoaiXe).First();
+            }
+            List<BaiXe> baiXes = BaiXeDAO.Instence.getListBaiXeNonVe(maLoaiXe) ;
+            if (baiXes.Count()==0)
+            {
+                cbBaiXe.Enabled = false;
+                cbBaiXe.Text = "Hết Bãi";
+                return;
+            }
+            cbBaiXe.Enabled = true;
+            cbBaiXe.DataSource = baiXes;
             cbBaiXe.DisplayMember = "TenBai";
             cbBaiXe.ValueMember = "MaBai";
+        }
+
+        private void cbBaiXe_TextChanged(object sender, EventArgs e)
+        {
+            int maBai;
+            Int32.TryParse(cbBaiXe.SelectedValue.ToString(), out maBai);
+            BaiXe baiXe = BaiXeDAO.Instence.GetBaiXe(maBai);
+            txtViTri.Text = baiXe.ViTri;
         }
     }
 

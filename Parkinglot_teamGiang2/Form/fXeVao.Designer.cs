@@ -70,7 +70,7 @@ namespace QLBaiGiuXe
             this.txtBienSo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBienSo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtBienSo.Location = new System.Drawing.Point(516, 27);
-            this.txtBienSo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBienSo.Margin = new System.Windows.Forms.Padding(2);
             this.txtBienSo.Multiline = true;
             this.txtBienSo.Name = "txtBienSo";
             this.txtBienSo.Size = new System.Drawing.Size(192, 30);
@@ -81,7 +81,7 @@ namespace QLBaiGiuXe
             this.txtTenXe.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTenXe.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtTenXe.Location = new System.Drawing.Point(516, 69);
-            this.txtTenXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenXe.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenXe.Multiline = true;
             this.txtTenXe.Name = "txtTenXe";
             this.txtTenXe.Size = new System.Drawing.Size(192, 26);
@@ -93,7 +93,7 @@ namespace QLBaiGiuXe
             this.cbLoaiXe.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cbLoaiXe.FormattingEnabled = true;
             this.cbLoaiXe.Location = new System.Drawing.Point(129, 63);
-            this.cbLoaiXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbLoaiXe.Margin = new System.Windows.Forms.Padding(2);
             this.cbLoaiXe.Name = "cbLoaiXe";
             this.cbLoaiXe.Size = new System.Drawing.Size(192, 29);
             this.cbLoaiXe.TabIndex = 1;
@@ -140,7 +140,7 @@ namespace QLBaiGiuXe
             this.txtMauXe.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMauXe.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtMauXe.Location = new System.Drawing.Point(516, 109);
-            this.txtMauXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMauXe.Margin = new System.Windows.Forms.Padding(2);
             this.txtMauXe.Multiline = true;
             this.txtMauXe.Name = "txtMauXe";
             this.txtMauXe.Size = new System.Drawing.Size(192, 26);
@@ -187,7 +187,7 @@ namespace QLBaiGiuXe
             this.btnVaoBai.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnVaoBai.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnVaoBai.Location = new System.Drawing.Point(383, 235);
-            this.btnVaoBai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVaoBai.Margin = new System.Windows.Forms.Padding(2);
             this.btnVaoBai.Name = "btnVaoBai";
             this.btnVaoBai.Size = new System.Drawing.Size(116, 35);
             this.btnVaoBai.TabIndex = 5;
@@ -199,7 +199,7 @@ namespace QLBaiGiuXe
             this.btnXuatBai.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnXuatBai.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnXuatBai.Location = new System.Drawing.Point(593, 235);
-            this.btnXuatBai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXuatBai.Margin = new System.Windows.Forms.Padding(2);
             this.btnXuatBai.Name = "btnXuatBai";
             this.btnXuatBai.Size = new System.Drawing.Size(115, 35);
             this.btnXuatBai.TabIndex = 5;
@@ -228,7 +228,7 @@ namespace QLBaiGiuXe
             this.gridVeXe.DefaultCellStyle = dataGridViewCellStyle5;
             this.gridVeXe.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gridVeXe.Location = new System.Drawing.Point(0, 357);
-            this.gridVeXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridVeXe.Margin = new System.Windows.Forms.Padding(2);
             this.gridVeXe.Name = "gridVeXe";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
@@ -249,7 +249,7 @@ namespace QLBaiGiuXe
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Location = new System.Drawing.Point(3, 281);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(723, 10);
             this.panel1.TabIndex = 7;
@@ -259,7 +259,7 @@ namespace QLBaiGiuXe
             this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtTimKiem.Location = new System.Drawing.Point(527, 320);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(156, 26);
@@ -270,7 +270,7 @@ namespace QLBaiGiuXe
             this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
             this.btnTimKiem.Location = new System.Drawing.Point(685, 320);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(32, 25);
             this.btnTimKiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -282,7 +282,7 @@ namespace QLBaiGiuXe
             this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnSua.Location = new System.Drawing.Point(11, 310);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(110, 36);
             this.btnSua.TabIndex = 5;
@@ -305,7 +305,6 @@ namespace QLBaiGiuXe
             // cbBaiXe
             // 
             this.cbBaiXe.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbBaiXe.Enabled = false;
             this.cbBaiXe.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cbBaiXe.FormattingEnabled = true;
             this.cbBaiXe.Location = new System.Drawing.Point(129, 113);
@@ -313,6 +312,7 @@ namespace QLBaiGiuXe
             this.cbBaiXe.Name = "cbBaiXe";
             this.cbBaiXe.Size = new System.Drawing.Size(192, 29);
             this.cbBaiXe.TabIndex = 1;
+            this.cbBaiXe.TextChanged += new System.EventHandler(this.cbBaiXe_TextChanged);
             // 
             // label8
             // 
@@ -461,7 +461,7 @@ namespace QLBaiGiuXe
             this.Controls.Add(this.txtMauXe);
             this.Controls.Add(this.txtMaVe);
             this.Controls.Add(this.txtBienSo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fXeVao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Xe Vào";
