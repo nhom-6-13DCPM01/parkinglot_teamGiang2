@@ -31,6 +31,7 @@ namespace QLBaiGiuXe
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMainMenu));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnQLBX = new System.Windows.Forms.Button();
             this.btnTaiKhoan = new System.Windows.Forms.Button();
             this.btnXeRa = new System.Windows.Forms.Button();
             this.btnXevao = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@ namespace QLBaiGiuXe
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnQLBX = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -60,20 +60,38 @@ namespace QLBaiGiuXe
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(202, 682);
+            this.panelMenu.Size = new System.Drawing.Size(202, 546);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnQLBX
+            // 
+            this.btnQLBX.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQLBX.FlatAppearance.BorderSize = 0;
+            this.btnQLBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLBX.Font = new System.Drawing.Font("Segoe UI Light", 13.8F);
+            this.btnQLBX.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnQLBX.Location = new System.Drawing.Point(0, 208);
+            this.btnQLBX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnQLBX.Name = "btnQLBX";
+            this.btnQLBX.Size = new System.Drawing.Size(202, 48);
+            this.btnQLBX.TabIndex = 4;
+            this.btnQLBX.Text = "Quản Lý Bãi Xe";
+            this.btnQLBX.UseVisualStyleBackColor = true;
+            this.btnQLBX.Click += new System.EventHandler(this.btnQLBX_Click);
             // 
             // btnTaiKhoan
             // 
             this.btnTaiKhoan.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTaiKhoan.FlatAppearance.BorderSize = 0;
             this.btnTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaiKhoan.Font = new System.Drawing.Font("Segoe UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTaiKhoan.Font = new System.Drawing.Font("Segoe UI Light", 13.8F);
             this.btnTaiKhoan.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnTaiKhoan.Location = new System.Drawing.Point(0, 200);
+            this.btnTaiKhoan.Location = new System.Drawing.Point(0, 160);
+            this.btnTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTaiKhoan.Name = "btnTaiKhoan";
-            this.btnTaiKhoan.Size = new System.Drawing.Size(202, 60);
+            this.btnTaiKhoan.Size = new System.Drawing.Size(202, 48);
             this.btnTaiKhoan.TabIndex = 3;
             this.btnTaiKhoan.Text = "Tài Khoản";
             this.btnTaiKhoan.UseVisualStyleBackColor = true;
@@ -84,11 +102,12 @@ namespace QLBaiGiuXe
             this.btnXeRa.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnXeRa.FlatAppearance.BorderSize = 0;
             this.btnXeRa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXeRa.Font = new System.Drawing.Font("Segoe UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnXeRa.Font = new System.Drawing.Font("Segoe UI Light", 13.8F);
             this.btnXeRa.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnXeRa.Location = new System.Drawing.Point(0, 140);
+            this.btnXeRa.Location = new System.Drawing.Point(0, 112);
+            this.btnXeRa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXeRa.Name = "btnXeRa";
-            this.btnXeRa.Size = new System.Drawing.Size(202, 60);
+            this.btnXeRa.Size = new System.Drawing.Size(202, 48);
             this.btnXeRa.TabIndex = 2;
             this.btnXeRa.Text = "Xe Ra";
             this.btnXeRa.UseVisualStyleBackColor = true;
@@ -99,11 +118,12 @@ namespace QLBaiGiuXe
             this.btnXevao.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnXevao.FlatAppearance.BorderSize = 0;
             this.btnXevao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXevao.Font = new System.Drawing.Font("Segoe UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnXevao.Font = new System.Drawing.Font("Segoe UI Light", 13.8F);
             this.btnXevao.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnXevao.Location = new System.Drawing.Point(0, 80);
+            this.btnXevao.Location = new System.Drawing.Point(0, 64);
+            this.btnXevao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXevao.Name = "btnXevao";
-            this.btnXevao.Size = new System.Drawing.Size(202, 60);
+            this.btnXevao.Size = new System.Drawing.Size(202, 48);
             this.btnXevao.TabIndex = 1;
             this.btnXevao.Text = "Xe Vào";
             this.btnXevao.UseVisualStyleBackColor = true;
@@ -115,16 +135,17 @@ namespace QLBaiGiuXe
             this.panelLogo.Controls.Add(this.label1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(202, 80);
+            this.panelLogo.Size = new System.Drawing.Size(202, 64);
             this.panelLogo.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(22, 27);
+            this.label1.Location = new System.Drawing.Point(22, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(155, 38);
             this.label1.TabIndex = 0;
@@ -137,17 +158,19 @@ namespace QLBaiGiuXe
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(202, 0);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(996, 80);
+            this.panelTitleBar.Size = new System.Drawing.Size(996, 64);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
             // btnCloseChildForm
             // 
             this.btnCloseChildForm.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseChildForm.Image")));
-            this.btnCloseChildForm.Location = new System.Drawing.Point(27, 37);
+            this.btnCloseChildForm.Location = new System.Drawing.Point(27, 30);
+            this.btnCloseChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCloseChildForm.Name = "btnCloseChildForm";
-            this.btnCloseChildForm.Size = new System.Drawing.Size(33, 28);
+            this.btnCloseChildForm.Size = new System.Drawing.Size(33, 22);
             this.btnCloseChildForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCloseChildForm.TabIndex = 1;
             this.btnCloseChildForm.TabStop = false;
@@ -157,9 +180,9 @@ namespace QLBaiGiuXe
             // 
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16.2F);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(437, 27);
+            this.lblTitle.Location = new System.Drawing.Point(437, 22);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(97, 38);
             this.lblTitle.TabIndex = 0;
@@ -169,46 +192,35 @@ namespace QLBaiGiuXe
             // 
             this.panelDesktopPane.Controls.Add(this.pictureBox1);
             this.panelDesktopPane.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktopPane.Location = new System.Drawing.Point(202, 80);
+            this.panelDesktopPane.Location = new System.Drawing.Point(202, 64);
+            this.panelDesktopPane.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(996, 602);
+            this.panelDesktopPane.Size = new System.Drawing.Size(996, 482);
             this.panelDesktopPane.TabIndex = 2;
+            this.panelDesktopPane.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPane_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(155, 103);
+            this.pictureBox1.Location = new System.Drawing.Point(155, 82);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(677, 415);
+            this.pictureBox1.Size = new System.Drawing.Size(677, 332);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnQLBX
-            // 
-            this.btnQLBX.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQLBX.FlatAppearance.BorderSize = 0;
-            this.btnQLBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLBX.Font = new System.Drawing.Font("Segoe UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnQLBX.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnQLBX.Location = new System.Drawing.Point(0, 260);
-            this.btnQLBX.Name = "btnQLBX";
-            this.btnQLBX.Size = new System.Drawing.Size(202, 60);
-            this.btnQLBX.TabIndex = 4;
-            this.btnQLBX.Text = "Quản Lý Bãi Xe";
-            this.btnQLBX.UseVisualStyleBackColor = true;
-            this.btnQLBX.Click += new System.EventHandler(this.btnQLBX_Click);
-            // 
             // fMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1198, 682);
+            this.ClientSize = new System.Drawing.Size(1198, 546);
             this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fMainMenu";
             this.Text = "fMainMenu";
             this.Load += new System.EventHandler(this.fMainMenu_Load);

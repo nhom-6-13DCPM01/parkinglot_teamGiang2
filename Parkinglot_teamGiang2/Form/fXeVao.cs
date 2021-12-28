@@ -25,6 +25,7 @@ namespace QLBaiGiuXe
             LoadTheme();
             loadData();
         }
+
         private void LoadTheme()
         {
             foreach (Control btns in this.Controls)
@@ -37,14 +38,14 @@ namespace QLBaiGiuXe
                     btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
                 }
             }
-            label1.ForeColor = ThemeColor.SecondaryColor;
-            
-            label3.ForeColor = ThemeColor.SecondaryColor;
+            label1.ForeColor = ThemeColor.PrimaryColor;
+            label2.ForeColor = ThemeColor.SecondaryColor;
+            label3.ForeColor = ThemeColor.PrimaryColor;
             label4.ForeColor = ThemeColor.SecondaryColor;
-            label5.ForeColor = ThemeColor.PrimaryColor;
-            label6.ForeColor = ThemeColor.PrimaryColor;
-            label7.ForeColor = ThemeColor.PrimaryColor;
- 
+            label5.ForeColor = ThemeColor.SecondaryColor;
+            label6.ForeColor = ThemeColor.SecondaryColor;
+            label7.ForeColor = ThemeColor.SecondaryColor;
+            label8.ForeColor = ThemeColor.PrimaryColor;
 
         }
         

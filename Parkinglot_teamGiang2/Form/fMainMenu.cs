@@ -141,5 +141,10 @@ namespace QLBaiGiuXe
         {
             OpenChildForm(new fQLBX(), sender);
         }
+
+        private void panelDesktopPane_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
