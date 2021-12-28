@@ -15,17 +15,17 @@ namespace QLBaiGiuXe
     public partial class fTaikhoan : Form
     {
 
-        BindingSource accountList = new BindingSource();
         public fTaikhoan()
         {
-            InitializeComponent();
-            Load();
-        }
 
-        private void fTaikhoan_Load(object sender, EventArgs e)
+            InitializeComponent();
+        }
+        private void fTaikhoan_Load_1(object sender, EventArgs e)
         {
+            LoadData();
             LoadTheme();
         }
+
         private void LoadTheme()
         {
             foreach (Control btns in this.Controls)
@@ -43,11 +43,10 @@ namespace QLBaiGiuXe
             label3.ForeColor = ThemeColor.PrimaryColor;
             label4.ForeColor = ThemeColor.PrimaryColor;
         }
-        void Load()
+        public void LoadData()
         {
-            dgvTK.DataSource = accountList;
-            LoadAccount();
-            AddAccountBinding();
+            dgvTK.DataSource = null;
+            dgvTK.DataSource = AccountDAO.Instence.getListAccount();
         }
         public List<Account> SearchAccountByName(string tenTaiKhoan)
         {
@@ -55,17 +54,6 @@ namespace QLBaiGiuXe
             List<Account> listAccount = AccountDAO.Instence.SearchAccountByName(tenTaiKhoan);
 
             return listAccount;
-        }
-        void AddAccountBinding()
-        {
-            txtTenTK.DataBindings.Add(new Binding("Text", dgvTK.DataSource, "tenTaiKhoan", true, DataSourceUpdateMode.Never));
-            txtTenNV.DataBindings.Add(new Binding("Text", dgvTK.DataSource, "tenNhanVien", true, DataSourceUpdateMode.Never));
-            
-        }
-
-        void LoadAccount()
-        {
-            accountList.DataSource = AccountDAO.Instence.GetListAccount();
         }
 
         //
@@ -80,7 +68,6 @@ namespace QLBaiGiuXe
                 MessageBox.Show("Thêm tài khoản thất bại");
             }
 
-            LoadAccount();
         }
 
         void EditAccount(string tenTaiKhoan, string tenNhanVien, string matKhau, int vaiTro)
@@ -94,7 +81,6 @@ namespace QLBaiGiuXe
                 MessageBox.Show("Cập nhật tài khoản thất bại");
             }
 
-            LoadAccount();
         }
 
         void DeleteAccount(string tenTaiKhoan)
@@ -109,7 +95,6 @@ namespace QLBaiGiuXe
                 MessageBox.Show("Xóa tài khoản thất bại");
             }
 
-            LoadAccount();
         }
 
         void ResetPass(string tentaiKhoan)
@@ -161,7 +146,8 @@ namespace QLBaiGiuXe
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            accountList.DataSource = SearchAccountByName(txtTimKiem.Text);
+
         }
+
     }
 }

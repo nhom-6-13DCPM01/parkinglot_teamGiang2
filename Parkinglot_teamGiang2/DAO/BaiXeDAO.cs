@@ -59,6 +59,21 @@ namespace QLBaiGiuXe.DAO
             return list;
         }
 
+        public List<BaiXe> getListBaiXeNonVe()
+        {
+            List<BaiXe> list = new List<BaiXe>();
+            string query = "SELECT * FROM BaiXe AS B " +
+                "Where(SELECT COUNT(*) FROM VeXe AS V " +
+                "Where V.baiXe = B.maBai and (SELECT COUNT(*) FROM PhieuThanhToan AS P " +
+                "Where P.idVeXe = V.maVeXe) = 0) = 0";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                BaiXe cate = new BaiXe(item);
+                list.Add(cate);
+            }
+            return list;
+        }
         public BaiXe GetBaiXe(int maBai)
         {
             BaiXe temp = null;

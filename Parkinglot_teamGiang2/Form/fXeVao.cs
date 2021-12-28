@@ -23,7 +23,7 @@ namespace QLBaiGiuXe
         private void fXeVao_Load(object sender, EventArgs e)
         {
             LoadTheme();
-            
+            loadData();
         }
         private void LoadTheme()
         {
@@ -38,7 +38,7 @@ namespace QLBaiGiuXe
                 }
             }
             label1.ForeColor = ThemeColor.SecondaryColor;
-            label2.ForeColor = ThemeColor.SecondaryColor;
+            
             label3.ForeColor = ThemeColor.SecondaryColor;
             label4.ForeColor = ThemeColor.SecondaryColor;
             label5.ForeColor = ThemeColor.PrimaryColor;
@@ -47,8 +47,23 @@ namespace QLBaiGiuXe
  
 
         }
-       
         
+        public void loadData()
+        {
+            gridVeXe.DataSource = null;
+            gridVeXe.DataSource = VeXeDAO.Instence.getListVeXeNonBill();
+
+            cbLoaiXe.DataSource = LoaiXeDAO.Instence.getListLoaiXe();
+            cbLoaiXe.DisplayMember = "TenLoaiXe";
+            cbLoaiXe.ValueMember = "MaLoaiXe";
+
+
+        }
+
+        private void cbLoaiXe_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 
 }
