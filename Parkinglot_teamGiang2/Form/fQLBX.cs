@@ -22,6 +22,27 @@ namespace QLBaiGiuXe
         private void fQLBX_Load(object sender, EventArgs e)
         {
             loadData();
+            LoadTheme();
+        }
+        private void LoadTheme()
+        {
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                }
+            }
+            label1.ForeColor = ThemeColor.SecondaryColor;
+            label2.ForeColor = ThemeColor.SecondaryColor;
+            label3.ForeColor = ThemeColor.SecondaryColor;
+            label4.ForeColor = ThemeColor.SecondaryColor;
+            label5.ForeColor = ThemeColor.PrimaryColor;
+            label6.ForeColor = ThemeColor.PrimaryColor;
+
         }
         /// <summary>
         /// CODE XỬ LÝ CỦA LOẠI XE

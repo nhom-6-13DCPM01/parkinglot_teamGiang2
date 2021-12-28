@@ -56,119 +56,132 @@ namespace QLBaiGiuXe
             // txtMaVeXe
             // 
             this.txtMaVeXe.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtMaVeXe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMaVeXe.Location = new System.Drawing.Point(150, 53);
+            this.txtMaVeXe.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtMaVeXe.Location = new System.Drawing.Point(155, 42);
+            this.txtMaVeXe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaVeXe.Multiline = true;
             this.txtMaVeXe.Name = "txtMaVeXe";
-            this.txtMaVeXe.Size = new System.Drawing.Size(255, 38);
+            this.txtMaVeXe.Size = new System.Drawing.Size(255, 31);
             this.txtMaVeXe.TabIndex = 1;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 53);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.label1.Location = new System.Drawing.Point(12, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 31);
+            this.label1.Size = new System.Drawing.Size(112, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "Mã vé xe";
             // 
             // txtBaiXe
             // 
             this.txtBaiXe.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtBaiXe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBaiXe.Location = new System.Drawing.Point(150, 122);
+            this.txtBaiXe.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtBaiXe.Location = new System.Drawing.Point(155, 98);
+            this.txtBaiXe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBaiXe.Multiline = true;
             this.txtBaiXe.Name = "txtBaiXe";
-            this.txtBaiXe.Size = new System.Drawing.Size(255, 38);
+            this.txtBaiXe.Size = new System.Drawing.Size(255, 31);
             this.txtBaiXe.TabIndex = 1;
             // 
             // txtBienSoXe
             // 
             this.txtBienSoXe.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtBienSoXe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBienSoXe.Location = new System.Drawing.Point(150, 192);
+            this.txtBienSoXe.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtBienSoXe.Location = new System.Drawing.Point(155, 154);
+            this.txtBienSoXe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBienSoXe.Multiline = true;
             this.txtBienSoXe.Name = "txtBienSoXe";
-            this.txtBienSoXe.Size = new System.Drawing.Size(255, 38);
+            this.txtBienSoXe.Size = new System.Drawing.Size(255, 31);
             this.txtBienSoXe.TabIndex = 1;
             // 
             // txtTenXe
             // 
             this.txtTenXe.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtTenXe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTenXe.Location = new System.Drawing.Point(585, 53);
+            this.txtTenXe.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtTenXe.Location = new System.Drawing.Point(590, 42);
+            this.txtTenXe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenXe.Multiline = true;
             this.txtTenXe.Name = "txtTenXe";
-            this.txtTenXe.Size = new System.Drawing.Size(255, 38);
+            this.txtTenXe.Size = new System.Drawing.Size(255, 31);
             this.txtTenXe.TabIndex = 1;
             // 
             // txtMauXe
             // 
             this.txtMauXe.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtMauXe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMauXe.Location = new System.Drawing.Point(585, 122);
+            this.txtMauXe.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtMauXe.Location = new System.Drawing.Point(590, 98);
+            this.txtMauXe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMauXe.Multiline = true;
             this.txtMauXe.Name = "txtMauXe";
-            this.txtMauXe.Size = new System.Drawing.Size(255, 38);
+            this.txtMauXe.Size = new System.Drawing.Size(255, 31);
             this.txtMauXe.TabIndex = 1;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(12, 129);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.label2.Location = new System.Drawing.Point(12, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 31);
+            this.label2.Size = new System.Drawing.Size(81, 32);
             this.label2.TabIndex = 2;
             this.label2.Text = "Bãi Xe";
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(12, 199);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.label3.Location = new System.Drawing.Point(12, 159);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 31);
+            this.label3.Size = new System.Drawing.Size(124, 32);
             this.label3.TabIndex = 2;
             this.label3.Text = "Biển số xe";
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(457, 54);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.label4.Location = new System.Drawing.Point(462, 43);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 31);
+            this.label4.Size = new System.Drawing.Size(84, 32);
             this.label4.TabIndex = 2;
             this.label4.Text = "Tên xe";
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(457, 129);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.label5.Location = new System.Drawing.Point(462, 103);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 31);
+            this.label5.Size = new System.Drawing.Size(94, 32);
             this.label5.TabIndex = 2;
             this.label5.Text = "Màu xe";
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(457, 199);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.label6.Location = new System.Drawing.Point(462, 159);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 31);
+            this.label6.Size = new System.Drawing.Size(96, 32);
             this.label6.TabIndex = 2;
             this.label6.Text = "Giờ vào";
             // 
             // dateTimePickerGioVao
             // 
-            this.dateTimePickerGioVao.CalendarFont = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePickerGioVao.Location = new System.Drawing.Point(585, 203);
+            this.dateTimePickerGioVao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dateTimePickerGioVao.CalendarFont = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.dateTimePickerGioVao.Location = new System.Drawing.Point(590, 162);
+            this.dateTimePickerGioVao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerGioVao.Name = "dateTimePickerGioVao";
-            this.dateTimePickerGioVao.Size = new System.Drawing.Size(250, 27);
+            this.dateTimePickerGioVao.Size = new System.Drawing.Size(250, 22);
             this.dateTimePickerGioVao.TabIndex = 3;
             this.dateTimePickerGioVao.Value = new System.DateTime(2021, 12, 28, 11, 27, 0, 0);
             // 
@@ -176,9 +189,10 @@ namespace QLBaiGiuXe
             // 
             this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
-            this.btnTimKiem.Location = new System.Drawing.Point(893, 305);
+            this.btnTimKiem.Location = new System.Drawing.Point(903, 244);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(43, 38);
+            this.btnTimKiem.Size = new System.Drawing.Size(43, 30);
             this.btnTimKiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnTimKiem.TabIndex = 10;
             this.btnTimKiem.TabStop = false;
@@ -186,18 +200,19 @@ namespace QLBaiGiuXe
             // txtTimKiem
             // 
             this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTimKiem.Location = new System.Drawing.Point(681, 305);
+            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtTimKiem.Location = new System.Drawing.Point(691, 244);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(206, 38);
+            this.txtTimKiem.Size = new System.Drawing.Size(206, 31);
             this.txtTimKiem.TabIndex = 9;
             // 
             // dgvXeRa
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -206,18 +221,19 @@ namespace QLBaiGiuXe
             this.dgvXeRa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvXeRa.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvXeRa.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvXeRa.Location = new System.Drawing.Point(0, 358);
+            this.dgvXeRa.Location = new System.Drawing.Point(0, 287);
+            this.dgvXeRa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvXeRa.Name = "dgvXeRa";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -225,7 +241,7 @@ namespace QLBaiGiuXe
             this.dgvXeRa.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvXeRa.RowHeadersWidth = 51;
             this.dgvXeRa.RowTemplate.Height = 29;
-            this.dgvXeRa.Size = new System.Drawing.Size(943, 188);
+            this.dgvXeRa.Size = new System.Drawing.Size(953, 150);
             this.dgvXeRa.TabIndex = 11;
             // 
             // panel1
@@ -233,17 +249,18 @@ namespace QLBaiGiuXe
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(0, 258);
+            this.panel1.Location = new System.Drawing.Point(0, 206);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(943, 1);
+            this.panel1.Size = new System.Drawing.Size(953, 1);
             this.panel1.TabIndex = 12;
             // 
             // fXeRa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(943, 546);
+            this.ClientSize = new System.Drawing.Size(953, 437);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvXeRa);
             this.Controls.Add(this.btnTimKiem);
@@ -260,6 +277,7 @@ namespace QLBaiGiuXe
             this.Controls.Add(this.txtBaiXe);
             this.Controls.Add(this.txtTenXe);
             this.Controls.Add(this.txtMaVeXe);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fXeRa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Xe Ra";
