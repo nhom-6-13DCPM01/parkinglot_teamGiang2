@@ -70,7 +70,7 @@ namespace QLBaiGiuXe.DAO
         }
         public DataTable GetListAccount()
         {
-            return DataProvider.Instance.ExecuteQuery("SELECT tenTaiKhoan, tenNhanVien, Type FROM dbo.Account");
+            return DataProvider.Instance.ExecuteQuery("SELECT tenTaiKhoan, tenNhanVien, vaiTro FROM dbo.Account");
         }
 
         public List<Account> SearchAccountByName(string tenTaiKhoan)
