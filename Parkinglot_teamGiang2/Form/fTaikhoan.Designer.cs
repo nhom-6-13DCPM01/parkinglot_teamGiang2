@@ -30,6 +30,9 @@ namespace QLBaiGiuXe
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fTaikhoan));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTenTK = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -145,7 +148,7 @@ namespace QLBaiGiuXe
             this.btnThem.Location = new System.Drawing.Point(277, 137);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(147, 36);
+            this.btnThem.Size = new System.Drawing.Size(151, 47);
             this.btnThem.TabIndex = 6;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -158,7 +161,7 @@ namespace QLBaiGiuXe
             this.btnXoa.Location = new System.Drawing.Point(461, 137);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(147, 36);
+            this.btnXoa.Size = new System.Drawing.Size(148, 47);
             this.btnXoa.TabIndex = 6;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -171,7 +174,7 @@ namespace QLBaiGiuXe
             this.btnSua.Location = new System.Drawing.Point(641, 137);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(147, 36);
+            this.btnSua.Size = new System.Drawing.Size(143, 47);
             this.btnSua.TabIndex = 6;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -192,7 +195,7 @@ namespace QLBaiGiuXe
             // 
             this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
-            this.btnTimKiem.Location = new System.Drawing.Point(887, 243);
+            this.btnTimKiem.Location = new System.Drawing.Point(887, 231);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(43, 31);
@@ -205,7 +208,7 @@ namespace QLBaiGiuXe
             // 
             this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtTimKiem.Location = new System.Drawing.Point(675, 243);
+            this.txtTimKiem.Location = new System.Drawing.Point(675, 231);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
@@ -219,7 +222,7 @@ namespace QLBaiGiuXe
             this.btnTaiLai.Location = new System.Drawing.Point(95, 137);
             this.btnTaiLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTaiLai.Name = "btnTaiLai";
-            this.btnTaiLai.Size = new System.Drawing.Size(128, 36);
+            this.btnTaiLai.Size = new System.Drawing.Size(128, 47);
             this.btnTaiLai.TabIndex = 13;
             this.btnTaiLai.Text = "Tải lại";
             this.btnTaiLai.UseVisualStyleBackColor = true;
@@ -227,13 +230,37 @@ namespace QLBaiGiuXe
             // 
             // dgvTK
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTK.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTK.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTK.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvTK.Location = new System.Drawing.Point(0, 280);
-            this.dgvTK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvTK.Location = new System.Drawing.Point(0, 268);
+            this.dgvTK.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTK.Name = "dgvTK";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTK.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTK.RowHeadersWidth = 51;
-            this.dgvTK.Size = new System.Drawing.Size(935, 156);
+            this.dgvTK.Size = new System.Drawing.Size(935, 168);
             this.dgvTK.TabIndex = 14;
             // 
             // fTaikhoan
