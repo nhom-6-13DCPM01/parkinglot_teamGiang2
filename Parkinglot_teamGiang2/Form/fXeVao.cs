@@ -62,7 +62,13 @@ namespace QLBaiGiuXe
 
         private void cbLoaiXe_TextChanged(object sender, EventArgs e)
         {
-            
+            cbBaiXe.Enabled = true;
+            cbBaiXe.DataSource = null;
+            int maLoaiXe;
+            Int32.TryParse(cbLoaiXe.SelectedValue.ToString(), out maLoaiXe);
+            cbBaiXe.DataSource = BaiXeDAO.Instence.getListBaiXeNonVe(maLoaiXe) ;
+            cbBaiXe.DisplayMember = "TenBai";
+            cbBaiXe.ValueMember = "MaBai";
         }
     }
 
