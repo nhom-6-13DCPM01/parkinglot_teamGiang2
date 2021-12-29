@@ -161,6 +161,18 @@ namespace QLBaiGiuXe
             return true;
         }
 
+        private void gridVeXe_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try 
+            {
+                int id = Convert.ToInt32(gridVeXe.Rows[e.RowIndex].Cells[0].Value);
+            }
+            catch(Exception)
+            {
+
+            }
+
+        }
     }
 
 }

@@ -85,40 +85,40 @@
     <Compile Include="DAO\LoaiXeDAO.cs" />
     <Compile Include="DAO\PhieuThanhToanDAO.cs" />
     <Compile Include="DAO\VeXeDAO.cs" />
-    <Compile Include="Form\fLogin.cs">
+    <Compile Include="UI\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\fLogin.Designer.cs">
+    <Compile Include="UI\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\fMainMenu.cs">
+    <Compile Include="UI\fMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\fMainMenu.Designer.cs">
+    <Compile Include="UI\fMainMenu.Designer.cs">
       <DependentUpon>fMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\fQLBX.cs">
+    <Compile Include="UI\fQLBX.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\fQLBX.Designer.cs">
+    <Compile Include="UI\fQLBX.Designer.cs">
       <DependentUpon>fQLBX.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\fTaikhoan.cs">
+    <Compile Include="UI\fTaikhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\fTaikhoan.Designer.cs">
+    <Compile Include="UI\fTaikhoan.Designer.cs">
       <DependentUpon>fTaikhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\fXeRa.cs">
+    <Compile Include="UI\fXeRa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\fXeRa.Designer.cs">
+    <Compile Include="UI\fXeRa.Designer.cs">
       <DependentUpon>fXeRa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\fXeVao.cs">
+    <Compile Include="UI\fXeVao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\fXeVao.Designer.cs">
+    <Compile Include="UI\fXeVao.Designer.cs">
       <DependentUpon>fXeVao.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Account.cs" />
@@ -128,6 +128,12 @@
     <Compile Include="Model\VeXe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportViewer\ThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewer\ThanhToan.Designer.cs">
+      <DependentUpon>ThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportViewer\VeGuiXe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,22 +142,22 @@
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="ThemColor.cs" />
-    <EmbeddedResource Include="Form\fLogin.resx">
+    <EmbeddedResource Include="UI\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\fMainMenu.resx">
+    <EmbeddedResource Include="UI\fMainMenu.resx">
       <DependentUpon>fMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\fQLBX.resx">
+    <EmbeddedResource Include="UI\fQLBX.resx">
       <DependentUpon>fQLBX.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\fTaikhoan.resx">
+    <EmbeddedResource Include="UI\fTaikhoan.resx">
       <DependentUpon>fTaikhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\fXeRa.resx">
+    <EmbeddedResource Include="UI\fXeRa.resx">
       <DependentUpon>fXeRa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\fXeVao.resx">
+    <EmbeddedResource Include="UI\fXeVao.resx">
       <DependentUpon>fXeVao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -163,6 +169,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportViewer\PhieuThanhToan.rdlc" />
+    <EmbeddedResource Include="ReportViewer\ThanhToan.resx">
+      <DependentUpon>ThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportViewer\VeGuiXe.rdlc" />
     <EmbeddedResource Include="ReportViewer\VeGuiXe.resx">
       <DependentUpon>VeGuiXe.cs</DependentUpon>
