@@ -71,6 +71,26 @@ namespace QLBaiGiuXe.DAO
             return list;
         }
 
+        public VeXe getVeXe(int maVeXe)
+        {
+            VeXe temp = null;
+            string query = "SELECT * FROM VeXe WHERE maVeXe = " + maVeXe;
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                temp = new VeXe(item);
+                return temp;
+            }
+            return temp;
+        }
+        public bool addVeXe(VeXe veXe)
+        {
+            string query = "INSERT INTO VeXe ( baiXe , bienSoXe , tenXe , mauXe , gioVao ) VALUES ( @BaiXe , @BienSoXe , @TenXe , @MauXe , @GioVao )";
+
+            int resulf = DataProvider.Instance.ExecuteNonQuery(query, new object[] { veXe.BaiXe, veXe.BienSoXe, veXe.TenXe , veXe.MauXe , veXe.GioVao });
+
+            return resulf > 0;
+        }
         public bool deleteVeXe(int maVeXe)
         {
             PhieuThanhToanDAO.Instence.deletePhieuThanhToan(maVeXe);

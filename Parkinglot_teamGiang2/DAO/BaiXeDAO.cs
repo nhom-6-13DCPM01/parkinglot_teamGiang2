@@ -59,13 +59,13 @@ namespace QLBaiGiuXe.DAO
             return list;
         }
 
-        public List<BaiXe> getListBaiXeNonVe()
+        public List<BaiXe> getListBaiXeNonVe(int maLoaiXe)
         {
             List<BaiXe> list = new List<BaiXe>();
             string query = "SELECT * FROM BaiXe AS B " +
                 "Where(SELECT COUNT(*) FROM VeXe AS V " +
                 "Where V.baiXe = B.maBai and (SELECT COUNT(*) FROM PhieuThanhToan AS P " +
-                "Where P.idVeXe = V.maVeXe) = 0) = 0";
+                "Where P.idVeXe = V.maVeXe) = 0) = 0 and B.loaiXe = "+ maLoaiXe;
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
