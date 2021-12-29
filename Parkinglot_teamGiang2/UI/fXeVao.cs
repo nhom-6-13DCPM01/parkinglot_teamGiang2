@@ -2,6 +2,7 @@
 using QLBaiGiuXe.DAO;
 using QLBaiGiuXe.Model;
 using System;
+using Parkinglot_teamGiang2.UI;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,7 +47,7 @@ namespace QLBaiGiuXe
             label5.ForeColor = ThemeColor.SecondaryColor;
             lbThongBao.ForeColor = ThemeColor.PrimaryColor;
             label8.ForeColor = ThemeColor.PrimaryColor;
-            
+
         }
 
         public void loadData()
@@ -78,6 +79,7 @@ namespace QLBaiGiuXe
             int maLoaiXe;
             Int32.TryParse(Convert.ToString(cbLoaiXe.SelectedValue), out maLoaiXe);
             List<BaiXe> baiXes = BaiXeDAO.Instence.getListBaiXeNonVe(maLoaiXe);
+
             if (baiXes.Count() == 0)
             {
                 lbThongBao.Visible = true;
@@ -85,6 +87,7 @@ namespace QLBaiGiuXe
                 txtViTri.Text = "";
                 return;
             }
+
             cbBaiXe.Enabled = true;
             lbThongBao.Visible = false;
             cbBaiXe.DisplayMember = "TenBai";
@@ -95,7 +98,7 @@ namespace QLBaiGiuXe
         private void loadDataGrid()
         {
             gridVeXe.DataSource = null;
-            gridVeXe.DataSource = VeXeDAO.Instence.getListVeXeNonBill().OrderByDescending(c=>c.MaVeXe).ToList();
+            gridVeXe.DataSource = VeXeDAO.Instence.getListVeXeNonBill().OrderByDescending(c => c.MaVeXe).ToList();
         }
         private void cbBaiXe_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -115,7 +118,7 @@ namespace QLBaiGiuXe
             {
                 return;
             }
-            if(!xacNhan("Bạn có chắc muốn xe có biển số: "+ txtBienSo.Text + "\n\nVào bãi xe: "+ cbBaiXe.Text+"\n\nCho loại xe : " + cbLoaiXe.Text ))
+            if (!xacNhan("Bạn có chắc muốn xe có biển số: " + txtBienSo.Text + "\n\nVào bãi xe: " + cbBaiXe.Text + "\n\nCho loại xe : " + cbLoaiXe.Text))
             {
                 return;
             }
@@ -132,17 +135,23 @@ namespace QLBaiGiuXe
             veXe.MauXe = txtMauXe.Text;
             veXe.GioVao = DateTime.Now;
             VeXeDAO.Instence.addVeXe(veXe);
-            
+
             VeXe veXe2 = VeXeDAO.Instence.getListVeXeNonBill().OrderByDescending(c => c.MaVeXe).First();
             MessageBox.Show("Xe vào bãi thành công", "Thông báo", MessageBoxButtons.OK);
-            using (VeGuiXe veGuiXe = new VeGuiXe(veXe2.MaVeXe,cbLoaiXe.Text,cbBaiXe.Text,veXe.BienSoXe,veXe.MauXe,veXe.TenXe,veXe.GioVao))
+            using (VeGuiXe veGuiXe = new VeGuiXe(veXe2.MaVeXe, cbLoaiXe.Text, cbBaiXe.Text, veXe.BienSoXe, veXe.MauXe, veXe.TenXe, veXe.GioVao))
             {
                 veGuiXe.ShowDialog();
             }
             loadDataGrid();
             loadCBBX();
+            clearTxt();
         }
-
+        private void clearTxt()
+        {
+             txtBienSo.Text="";
+             txtTenXe.Text="";
+             txtMauXe.Text="";
+        }
         private bool CheckInput()
         {
             if (cbBaiXe.SelectedValue == null)
@@ -160,18 +169,154 @@ namespace QLBaiGiuXe
 
             return true;
         }
-
+        private void loadLabel(bool visible)
+        {
+            List<Label> labels = new List<Label>() { lbBienSo, lbTen, lbMau, lbLoai, lbBai, lbNgay };
+            foreach (Label item in labels)
+            {
+                item.Visible = visible;
+            }
+            if(visible == false)
+            {
+                textBox1.Text = "";
+            }
+            
+        }
         private void gridVeXe_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try 
+            try
             {
                 int id = Convert.ToInt32(gridVeXe.Rows[e.RowIndex].Cells[0].Value);
+                VeXe veXe = VeXeDAO.Instence.getVeXe(id);
+                BaiXe baiXe = BaiXeDAO.Instence.GetBaiXe(veXe.BaiXe);
+                textBox1.Text = veXe.MaVeXe.ToString();
+                lbBienSo.Text = veXe.BienSoXe.ToString();
+                lbTen.Text = Convert.ToString(veXe.TenXe);
+                lbMau.Text = Convert.ToString(veXe.MauXe);
+                lbNgay.Text = veXe.GioVao.ToString();
+
+                lbBai.Text = baiXe.TenBai;
+                lbLoai.Text = LoaiXeDAO.Instence.getLoaiXe(baiXe.LoaiXe).TenLoaiXe;
+                loadLabel(true);
             }
-            catch(Exception)
+            catch (Exception)
             {
 
             }
 
+        }
+        
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtTimKiem.Text))
+            {
+                return;
+            }
+            List<VeXe> veXes = VeXeDAO.Instence.getListVeXeNonBill();
+            if (radioButton1.Checked == true)
+            {
+                int id;
+                if (Int32.TryParse(txtTimKiem.Text,out id))
+                {
+                    gridVeXe.DataSource = null;
+                    
+                    gridVeXe.DataSource = veXes.Where(c => c.MaVeXe == id ).ToList();
+                }
+                return;
+            }
+            gridVeXe.DataSource = null;
+            gridVeXe.DataSource = veXes.Where(c => c.BienSoXe.Contains(txtTimKiem.Text)).ToList();
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            loadDataGrid();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Vui lòng chọn vé muốn sửa", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+            VeXe veXe = VeXeDAO.Instence.getVeXe(Convert.ToInt32(textBox1.Text));
+            using (fSuaVe fSuaVe = new fSuaVe(veXe))
+            {
+                fSuaVe.ShowDialog();
+            }
+            BaiXe baiXe = BaiXeDAO.Instence.GetBaiXe(veXe.BaiXe);
+            textBox1.Text = veXe.MaVeXe.ToString();
+            lbBienSo.Text = veXe.BienSoXe.ToString();
+            lbTen.Text = Convert.ToString(veXe.TenXe);
+            lbMau.Text = Convert.ToString(veXe.MauXe);
+            lbNgay.Text = veXe.GioVao.ToString();
+
+            lbBai.Text = baiXe.TenBai;
+            lbLoai.Text = LoaiXeDAO.Instence.getLoaiXe(baiXe.LoaiXe).TenLoaiXe;
+            loadLabel(true);
+            loadDataGrid();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Vui lòng chọn vé muốn thanh toán", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+            if (!xacNhan("Bạn có chắc muốn thanh toán vé có mã: "+textBox1.Text))
+            {
+                return;
+            }
+            VeXe veXe = VeXeDAO.Instence.getVeXe(Convert.ToInt32(textBox1.Text));
+            BaiXe baiXe = BaiXeDAO.Instence.GetBaiXe(veXe.BaiXe);
+            LoaiXe loaiXe = LoaiXeDAO.Instence.getLoaiXe(baiXe.LoaiXe);
+            PhieuThanhToan phieuThanhToan = new PhieuThanhToan();
+            phieuThanhToan.IdVeXe = veXe.MaVeXe;
+            phieuThanhToan.GioRa = DateTime.Now;
+            TimeSpan time =  phieuThanhToan.GioRa - veXe.GioVao ;
+            if(time.Days == 0)
+            {
+                if(time.Hours == 0)
+                {
+                    phieuThanhToan.TongTien = loaiXe.DonGiaH;
+                }
+                else
+                {
+                    phieuThanhToan.TongTien = loaiXe.DonGiaH * time.Hours;
+                }
+            }
+            else
+            {
+                phieuThanhToan.TongTien = loaiXe.DonGiaNgay * time.Days;
+            }
+            PhieuThanhToanDAO.Instence.addPhieuThanhToan(phieuThanhToan);
+            using(ThanhToan thanhToan = new ThanhToan(veXe, phieuThanhToan, lbLoai.Text, lbBai.Text))
+            {
+                thanhToan.ShowDialog();
+            }
+            loadLabel(false);
+            loadData();
+            loadDataGrid();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Vui lòng chọn vé muốn xóa", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+            if (!xacNhan("Bạn có chắc muốn xóa vé có mã: " + textBox1.Text))
+            {
+                return;
+            }
+
+            VeXeDAO.Instence.deleteVeXe(Convert.ToInt32(textBox1.Text));
+            loadLabel(false);
+            loadDataGrid();
+            loadData();
         }
     }
 
