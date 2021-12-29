@@ -45,6 +45,14 @@ namespace QLBaiGiuXe.DAO
             }
             return list;
         }
+        public bool addPhieuThanhToan(PhieuThanhToan phieuThanhToan)
+        {
+            string query = "INSERT INTO PhieuThanhToan ( idVeXe , gioRa , tongTien ) VALUES ( @idVeXe , @gioRa , @tongTien )";
+
+            int resulf = DataProvider.Instance.ExecuteNonQuery(query, new object[] { phieuThanhToan.IdVeXe , phieuThanhToan.GioRa , phieuThanhToan.TongTien });
+
+            return resulf > 0;
+        }
 
         public bool deletePhieuThanhToan(int idVeXe)
         {

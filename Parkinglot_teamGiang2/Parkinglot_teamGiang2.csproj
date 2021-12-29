@@ -103,6 +103,12 @@
     <Compile Include="UI\fQLBX.Designer.cs">
       <DependentUpon>fQLBX.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\fSuaVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\fSuaVe.Designer.cs">
+      <DependentUpon>fSuaVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\fTaikhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\fQLBX.resx">
       <DependentUpon>fQLBX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\fSuaVe.resx">
+      <DependentUpon>fSuaVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\fTaikhoan.resx">
       <DependentUpon>fTaikhoan.cs</DependentUpon>

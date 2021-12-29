@@ -91,6 +91,15 @@ namespace QLBaiGiuXe.DAO
 
             return resulf > 0;
         }
+
+        public bool updateVeXe(VeXe veXe)
+        {
+            string query = "UPDATE VeXe SET baiXe = @baiXe , bienSoXe = @bienSoXe , tenXe = @tenXe , mauXe = @mauXe WHERE maVeXe = @maVeXe";
+
+            int resulf = DataProvider.Instance.ExecuteNonQuery(query, new object[] { veXe.BaiXe , veXe.BienSoXe , veXe.TenXe , veXe.MauXe , veXe.MaVeXe });
+
+            return resulf > 0;
+        }
         public bool deleteVeXe(int maVeXe)
         {
             PhieuThanhToanDAO.Instence.deletePhieuThanhToan(maVeXe);

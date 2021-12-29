@@ -12,6 +12,11 @@ namespace QLBaiGiuXe.Model
         private int idVeXe;
         private DateTime gioRa;
         private decimal tongTien;
+
+        public PhieuThanhToan()
+        {
+        }
+
         public PhieuThanhToan(DataRow row)
         {
             this.idVeXe = Convert.ToInt32(row["idVeXe"]);
