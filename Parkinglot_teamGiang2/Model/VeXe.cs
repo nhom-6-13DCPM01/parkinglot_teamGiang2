@@ -15,6 +15,11 @@ namespace QLBaiGiuXe.Model
         private string tenXe;
         private string mauXe;
         private DateTime gioVao;
+
+        public VeXe()
+        {
+        }
+
         public VeXe(DataRow row)
         {
             this.maVeXe = Convert.ToInt32(row["maVeXe"]);
