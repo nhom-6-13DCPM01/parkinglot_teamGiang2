@@ -23,6 +23,8 @@ namespace QLBaiGiuXe.Model
             this.gioRa = Convert.ToDateTime(row["gioRa"]);
             this.tongTien = Convert.ToDecimal(row["tongTien"]);
         }
+
+        public static object Instence { get; internal set; }
         public int IdVeXe { get => idVeXe; set => idVeXe = value; }
         public DateTime GioRa { get => gioRa; set => gioRa = value; }
         public decimal TongTien { get => tongTien; set => tongTien = value; }
