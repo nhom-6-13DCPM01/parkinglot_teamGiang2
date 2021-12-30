@@ -85,6 +85,7 @@
     <Compile Include="DAO\LoaiXeDAO.cs" />
     <Compile Include="DAO\PhieuThanhToanDAO.cs" />
     <Compile Include="DAO\VeXeDAO.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="UI\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,7 +147,6 @@
     <Compile Include="ReportViewer\VeGuiXe.Designer.cs">
       <DependentUpon>VeGuiXe.cs</DependentUpon>
     </Compile>
-    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="ThemColor.cs" />
     <EmbeddedResource Include="UI\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
@@ -212,7 +212,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
