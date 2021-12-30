@@ -85,6 +85,18 @@
     <Compile Include="DAO\LoaiXeDAO.cs" />
     <Compile Include="DAO\PhieuThanhToanDAO.cs" />
     <Compile Include="DAO\VeXeDAO.cs" />
+    <Compile Include="ReportViewer\DenBu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewer\DenBu.Designer.cs">
+      <DependentUpon>DenBu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\fSuCo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\fSuCo.Designer.cs">
+      <DependentUpon>fSuCo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +159,13 @@
       <DependentUpon>VeGuiXe.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemColor.cs" />
+    <EmbeddedResource Include="ReportViewer\DenBu.resx">
+      <DependentUpon>DenBu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewer\PhieuDenBu.rdlc" />
+    <EmbeddedResource Include="UI\fSuCo.resx">
+      <DependentUpon>fSuCo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>

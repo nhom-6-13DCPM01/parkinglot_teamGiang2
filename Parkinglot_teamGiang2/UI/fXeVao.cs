@@ -318,6 +318,27 @@ namespace QLBaiGiuXe
             loadDataGrid();
             loadData();
         }
+
+        private void btnDenBu_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Vui lòng chọn vé đền bù", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+            if (!xacNhan("Bạn có chắc muốn lập phiếu đền bù cho vé có mã : " + textBox1.Text))
+            {
+                return;
+            }
+            using (fSuCo denBu = new fSuCo(Convert.ToInt32(textBox1.Text)))
+            {
+                denBu.ShowDialog();
+            }
+            
+            loadLabel(false);
+            loadDataGrid();
+            loadData();
+        }
     }
 
 }
