@@ -36,6 +36,7 @@ namespace Parkinglot_teamGiang2.ReportViewer
                 new ReportParameter("LoaiXe",loaiXe),
                 new ReportParameter("TenBaiXe",tenBai),
                 new ReportParameter("BienSoXe",bienSoXe),
+                new ReportParameter("TenXe",tenXe),
                 new ReportParameter("MauXe",mauXe),
                 new ReportParameter("NgayGio",ngayGio.ToString())
             };

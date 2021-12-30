@@ -58,6 +58,19 @@ namespace QLBaiGiuXe.DAO
             }
             return list;
         }
+
+        public DataTable getListVeXeWithBill()
+        {
+            List<VeXe> list = new List<VeXe>();
+            string query = "SELECT C.maVeXe , C.baiXe , C.bienSoXe , C.tenXe , C.mauXe , C.gioVao , U.gioRa , U.tongTien " +
+                "FROM (SELECT * FROM VeXe AS V " +
+                "Where (SELECT COUNT(*) FROM PhieuThanhToan AS P Where P.idVeXe = V.maVeXe) = 1) AS C,PhieuThanhToan AS U " +
+                "WHERE C.maVeXe = idVeXe";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            return data;
+        }
+
         public List<VeXe> getListVeXebyBaiXe(int baiXe)
         {
             List<VeXe> list = new List<VeXe>();

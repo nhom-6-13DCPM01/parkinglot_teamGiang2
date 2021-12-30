@@ -279,6 +279,11 @@ namespace QLBaiGiuXe
             // 
             // gridVeXe
             // 
+            this.gridVeXe.AllowUserToAddRows = false;
+            this.gridVeXe.AllowUserToDeleteRows = false;
+            this.gridVeXe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridVeXe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -297,10 +302,10 @@ namespace QLBaiGiuXe
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridVeXe.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gridVeXe.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gridVeXe.Location = new System.Drawing.Point(0, 334);
             this.gridVeXe.Margin = new System.Windows.Forms.Padding(2);
             this.gridVeXe.Name = "gridVeXe";
+            this.gridVeXe.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -332,7 +337,6 @@ namespace QLBaiGiuXe
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -371,7 +375,7 @@ namespace QLBaiGiuXe
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
             this.btnTimKiem.Location = new System.Drawing.Point(763, 304);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
@@ -384,7 +388,7 @@ namespace QLBaiGiuXe
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtTimKiem.Location = new System.Drawing.Point(604, 304);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
@@ -395,7 +399,7 @@ namespace QLBaiGiuXe
             // 
             // radioButton1
             // 
-            this.radioButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
             this.radioButton1.Location = new System.Drawing.Point(431, 311);
@@ -408,7 +412,7 @@ namespace QLBaiGiuXe
             // 
             // radioButton2
             // 
-            this.radioButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(520, 311);
             this.radioButton2.Name = "radioButton2";
@@ -419,6 +423,7 @@ namespace QLBaiGiuXe
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.lbNgay);
@@ -601,7 +606,6 @@ namespace QLBaiGiuXe
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnLamMoi.Location = new System.Drawing.Point(4, 293);
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(2);
