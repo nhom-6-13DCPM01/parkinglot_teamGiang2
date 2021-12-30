@@ -32,7 +32,18 @@ namespace QLBaiGiuXe.DAO
         }
 
         private PhieuThanhToanDAO() { }
-
+        public PhieuThanhToan getPhieu(int maVeXe)
+        {
+            PhieuThanhToan cate=null;
+            string query = "SELECT * FROM PhieuThanhToan WHERE idVeXe ="+maVeXe;
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                cate = new PhieuThanhToan(item);
+                return cate;
+            }
+            return cate;
+        }
         public List<PhieuThanhToan> getListPhieuThanhToan()
         {
             List<PhieuThanhToan> list = new List<PhieuThanhToan>();
