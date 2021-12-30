@@ -30,9 +30,9 @@ namespace QLBaiGiuXe
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fXeRa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtMaVeXe = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBaiXe = new System.Windows.Forms.TextBox();
@@ -49,8 +49,10 @@ namespace QLBaiGiuXe
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.dgvXeRa = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.reload = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnTimKiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXeRa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reload)).BeginInit();
             this.SuspendLayout();
             // 
             // txtMaVeXe
@@ -61,6 +63,7 @@ namespace QLBaiGiuXe
             this.txtMaVeXe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaVeXe.Multiline = true;
             this.txtMaVeXe.Name = "txtMaVeXe";
+            this.txtMaVeXe.ReadOnly = true;
             this.txtMaVeXe.Size = new System.Drawing.Size(255, 31);
             this.txtMaVeXe.TabIndex = 1;
             // 
@@ -83,6 +86,7 @@ namespace QLBaiGiuXe
             this.txtBaiXe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBaiXe.Multiline = true;
             this.txtBaiXe.Name = "txtBaiXe";
+            this.txtBaiXe.ReadOnly = true;
             this.txtBaiXe.Size = new System.Drawing.Size(255, 31);
             this.txtBaiXe.TabIndex = 1;
             // 
@@ -94,6 +98,7 @@ namespace QLBaiGiuXe
             this.txtBienSoXe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBienSoXe.Multiline = true;
             this.txtBienSoXe.Name = "txtBienSoXe";
+            this.txtBienSoXe.ReadOnly = true;
             this.txtBienSoXe.Size = new System.Drawing.Size(255, 31);
             this.txtBienSoXe.TabIndex = 1;
             // 
@@ -105,6 +110,7 @@ namespace QLBaiGiuXe
             this.txtTenXe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenXe.Multiline = true;
             this.txtTenXe.Name = "txtTenXe";
+            this.txtTenXe.ReadOnly = true;
             this.txtTenXe.Size = new System.Drawing.Size(255, 31);
             this.txtTenXe.TabIndex = 1;
             // 
@@ -116,6 +122,7 @@ namespace QLBaiGiuXe
             this.txtMauXe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMauXe.Multiline = true;
             this.txtMauXe.Name = "txtMauXe";
+            this.txtMauXe.ReadOnly = true;
             this.txtMauXe.Size = new System.Drawing.Size(255, 31);
             this.txtMauXe.TabIndex = 1;
             // 
@@ -196,6 +203,7 @@ namespace QLBaiGiuXe
             this.btnTimKiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnTimKiem.TabIndex = 10;
             this.btnTimKiem.TabStop = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -210,39 +218,40 @@ namespace QLBaiGiuXe
             // 
             // dgvXeRa
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvXeRa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvXeRa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvXeRa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvXeRa.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvXeRa.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvXeRa.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvXeRa.Location = new System.Drawing.Point(0, 287);
             this.dgvXeRa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvXeRa.Name = "dgvXeRa";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvXeRa.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvXeRa.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvXeRa.RowHeadersWidth = 51;
             this.dgvXeRa.RowTemplate.Height = 29;
             this.dgvXeRa.Size = new System.Drawing.Size(953, 150);
             this.dgvXeRa.TabIndex = 11;
+            this.dgvXeRa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvXeRa_CellClick);
             // 
             // panel1
             // 
@@ -255,12 +264,25 @@ namespace QLBaiGiuXe
             this.panel1.Size = new System.Drawing.Size(953, 1);
             this.panel1.TabIndex = 12;
             // 
+            // reload
+            // 
+            this.reload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.reload.Image = ((System.Drawing.Image)(resources.GetObject("reload.Image")));
+            this.reload.Location = new System.Drawing.Point(630, 249);
+            this.reload.Name = "reload";
+            this.reload.Size = new System.Drawing.Size(44, 26);
+            this.reload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.reload.TabIndex = 13;
+            this.reload.TabStop = false;
+            this.reload.Click += new System.EventHandler(this.reload_Click);
+            // 
             // fXeRa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(953, 437);
+            this.Controls.Add(this.reload);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvXeRa);
             this.Controls.Add(this.btnTimKiem);
@@ -284,6 +306,7 @@ namespace QLBaiGiuXe
             this.Load += new System.EventHandler(this.fXeRa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnTimKiem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXeRa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reload)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,5 +330,6 @@ namespace QLBaiGiuXe
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.DataGridView dgvXeRa;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox reload;
     }
 }
