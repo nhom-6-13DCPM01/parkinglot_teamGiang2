@@ -14,7 +14,8 @@ namespace QLBaiGiuXe
 {
     public partial class fTaikhoan : Form
     {
-
+        BindingSource accountList = new BindingSource();
+        
         public fTaikhoan()
         {
 
@@ -47,6 +48,15 @@ namespace QLBaiGiuXe
         {
             dgvTK.DataSource = null;
             dgvTK.DataSource = AccountDAO.Instence.getListAccount();
+            AddAccountBinding();
+        }
+       
+        public void Clear()
+        {
+            txtTenTK.Text = " ";
+            txtTenNV.Text = " ";
+            txtMK.Text = " ";
+
         }
         public List<Account> SearchAccountByName(string tenTaiKhoan)
         {
@@ -55,9 +65,12 @@ namespace QLBaiGiuXe
 
             return listAccount;
         }
-
+        void LoadAccount()
+        {
+            accountList.DataSource = AccountDAO.Instence.getListAccount();
+        }
         //
-        void AddAccount(string tenTaiKhoan, string tenNhanVien, string matKhau, int vaiTro)
+        void AddAccount(string tenTaiKhoan, string tenNhanVien, string matKhau, string vaiTro)
         {
             if (AccountDAO.Instence.InsertAccount(tenTaiKhoan, tenNhanVien, matKhau, vaiTro))
             {
@@ -67,10 +80,13 @@ namespace QLBaiGiuXe
             {
                 MessageBox.Show("Thêm tài khoản thất bại");
             }
+            LoadAccount();
+            LoadData();
+            Clear();
 
         }
 
-        void EditAccount(string tenTaiKhoan, string tenNhanVien, string matKhau, int vaiTro)
+        void EditAccount(string tenTaiKhoan, string tenNhanVien, string matKhau, string vaiTro)
         {
             if (AccountDAO.Instence.UpdateAccount(tenTaiKhoan, tenNhanVien, matKhau, vaiTro))
             {
@@ -80,7 +96,9 @@ namespace QLBaiGiuXe
             {
                 MessageBox.Show("Cập nhật tài khoản thất bại");
             }
-
+            LoadAccount();
+            LoadData();
+            Clear();
         }
 
         void DeleteAccount(string tenTaiKhoan)
@@ -94,6 +112,9 @@ namespace QLBaiGiuXe
             {
                 MessageBox.Show("Xóa tài khoản thất bại");
             }
+            LoadAccount();
+            LoadData();
+            Clear();
 
         }
 
@@ -107,6 +128,9 @@ namespace QLBaiGiuXe
             {
                 MessageBox.Show("Đặt lại mật khẩu thất bại");
             }
+            LoadAccount();
+            LoadData();
+            Clear();
         }
         //thêm
         private void btnThem_Click(object sender, EventArgs e)
@@ -114,7 +138,7 @@ namespace QLBaiGiuXe
             string tenTaiKhoan = txtTenTK.Text;
             string tenNhanVien = txtTenNV.Text;
             string matKhau = txtMK.Text;
-            int vaiTro = (int)cbVaiTro.SelectedIndex;
+            string vaiTro = txtVaiTro.Text;
 
             AddAccount(tenTaiKhoan, tenNhanVien, matKhau, vaiTro);
             txtMK.Clear();
@@ -132,7 +156,7 @@ namespace QLBaiGiuXe
             string tenTaiKhoan = txtTenTK.Text;
             string tenNhanVien = txtTenNV.Text;
             string matKhau = txtMK.Text;
-            int vaiTro = (int)cbVaiTro.SelectedIndex;
+            string vaiTro = txtVaiTro.Text;
 
             EditAccount(tenTaiKhoan, tenNhanVien, matKhau, vaiTro);
             txtMK.Clear();
@@ -140,8 +164,7 @@ namespace QLBaiGiuXe
 
         private void btnTaiLai_Click(object sender, EventArgs e)
         {
-            string tenTaiKhoan = txtTenTK.Text;
-            ResetPass(tenTaiKhoan);
+            Clear();
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -149,5 +172,12 @@ namespace QLBaiGiuXe
 
         }
 
+        void AddAccountBinding()
+        {
+            txtTenTK.DataBindings.Add(new Binding("Text", dgvTK.DataSource, "TenTaiKhoan", true, DataSourceUpdateMode.Never));
+            txtTenNV.DataBindings.Add(new Binding("Text", dgvTK.DataSource, "TenNhanVien", true, DataSourceUpdateMode.Never));
+            txtMK.DataBindings.Add(new Binding("Text", dgvTK.DataSource, "MatKhau", true, DataSourceUpdateMode.Never));
+           
+        }
     }
 }

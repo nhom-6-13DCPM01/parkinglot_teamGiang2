@@ -40,9 +40,9 @@ namespace QLBaiGiuXe
             }
         }
 
-        private bool Login(string tenTaiKhoan, string matKhau)
+        bool Login(string tenTaiKhoan, string matKhau)
         {
-            throw new NotImplementedException();
+            return AccountDAO.Instence.Login(tenTaiKhoan, matKhau);
         }
     }
 }

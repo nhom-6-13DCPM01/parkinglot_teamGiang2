@@ -40,7 +40,6 @@ namespace QLBaiGiuXe
             this.label3 = new System.Windows.Forms.Label();
             this.txtTenNV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbVaiTro = new System.Windows.Forms.ComboBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -49,6 +48,7 @@ namespace QLBaiGiuXe
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTaiLai = new System.Windows.Forms.Button();
             this.dgvTK = new System.Windows.Forms.DataGridView();
+            this.txtVaiTro = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnTimKiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTK)).BeginInit();
             this.SuspendLayout();
@@ -129,17 +129,6 @@ namespace QLBaiGiuXe
             this.label4.Size = new System.Drawing.Size(69, 28);
             this.label4.TabIndex = 0;
             this.label4.Text = "Vai trò";
-            // 
-            // cbVaiTro
-            // 
-            this.cbVaiTro.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbVaiTro.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.cbVaiTro.FormattingEnabled = true;
-            this.cbVaiTro.Location = new System.Drawing.Point(715, 78);
-            this.cbVaiTro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbVaiTro.Name = "cbVaiTro";
-            this.cbVaiTro.Size = new System.Drawing.Size(167, 39);
-            this.cbVaiTro.TabIndex = 2;
             // 
             // btnThem
             // 
@@ -263,12 +252,21 @@ namespace QLBaiGiuXe
             this.dgvTK.Size = new System.Drawing.Size(935, 168);
             this.dgvTK.TabIndex = 14;
             // 
+            // txtVaiTro
+            // 
+            this.txtVaiTro.Location = new System.Drawing.Point(720, 76);
+            this.txtVaiTro.Multiline = true;
+            this.txtVaiTro.Name = "txtVaiTro";
+            this.txtVaiTro.Size = new System.Drawing.Size(162, 34);
+            this.txtVaiTro.TabIndex = 15;
+            // 
             // fTaikhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(935, 436);
+            this.Controls.Add(this.txtVaiTro);
             this.Controls.Add(this.dgvTK);
             this.Controls.Add(this.btnTaiLai);
             this.Controls.Add(this.btnTimKiem);
@@ -277,7 +275,6 @@ namespace QLBaiGiuXe
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.cbVaiTro);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtTenNV);
             this.Controls.Add(this.label3);
@@ -306,7 +303,6 @@ namespace QLBaiGiuXe
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbVaiTro;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
@@ -315,5 +311,6 @@ namespace QLBaiGiuXe
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnTaiLai;
         private System.Windows.Forms.DataGridView dgvTK;
+        private System.Windows.Forms.TextBox txtVaiTro;
     }
 }
