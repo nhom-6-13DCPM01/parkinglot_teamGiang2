@@ -49,6 +49,7 @@ namespace QLBaiGiuXe
             dgvTK.DataSource = null;
             dgvTK.DataSource = AccountDAO.Instence.getListAccount();
             AddAccountBinding();
+            Loadcb(cbVaiTro);
         }
        
         public void Clear()
@@ -56,7 +57,11 @@ namespace QLBaiGiuXe
             txtTenTK.Text = " ";
             txtTenNV.Text = " ";
             txtMK.Text = " ";
-
+        }
+        void Loadcb(ComboBox cb)
+        {
+            List<bool> list = new List<bool>() {true, false };
+            cbVaiTro.DataSource = list;
         }
         public List<Account> SearchAccountByName(string tenTaiKhoan)
         {
@@ -70,7 +75,7 @@ namespace QLBaiGiuXe
             accountList.DataSource = AccountDAO.Instence.getListAccount();
         }
         //
-        void AddAccount(string tenTaiKhoan, string tenNhanVien, string matKhau, string vaiTro)
+        void AddAccount(string tenTaiKhoan, string tenNhanVien, string matKhau, bool vaiTro)
         {
             if (AccountDAO.Instence.InsertAccount(tenTaiKhoan, tenNhanVien, matKhau, vaiTro))
             {
@@ -86,7 +91,7 @@ namespace QLBaiGiuXe
 
         }
 
-        void EditAccount(string tenTaiKhoan, string tenNhanVien, string matKhau, string vaiTro)
+        void EditAccount(string tenTaiKhoan, string tenNhanVien, string matKhau, bool vaiTro)
         {
             if (AccountDAO.Instence.UpdateAccount(tenTaiKhoan, tenNhanVien, matKhau, vaiTro))
             {
@@ -138,7 +143,7 @@ namespace QLBaiGiuXe
             string tenTaiKhoan = txtTenTK.Text;
             string tenNhanVien = txtTenNV.Text;
             string matKhau = txtMK.Text;
-            string vaiTro = txtVaiTro.Text;
+            bool vaiTro = Convert.ToBoolean(cbVaiTro.Text);
 
             AddAccount(tenTaiKhoan, tenNhanVien, matKhau, vaiTro);
             txtMK.Clear();
@@ -156,7 +161,7 @@ namespace QLBaiGiuXe
             string tenTaiKhoan = txtTenTK.Text;
             string tenNhanVien = txtTenNV.Text;
             string matKhau = txtMK.Text;
-            string vaiTro = txtVaiTro.Text;
+            bool vaiTro = Convert.ToBoolean(cbVaiTro.Text);
 
             EditAccount(tenTaiKhoan, tenNhanVien, matKhau, vaiTro);
             txtMK.Clear();
@@ -177,7 +182,9 @@ namespace QLBaiGiuXe
             txtTenTK.DataBindings.Add(new Binding("Text", dgvTK.DataSource, "TenTaiKhoan", true, DataSourceUpdateMode.Never));
             txtTenNV.DataBindings.Add(new Binding("Text", dgvTK.DataSource, "TenNhanVien", true, DataSourceUpdateMode.Never));
             txtMK.DataBindings.Add(new Binding("Text", dgvTK.DataSource, "MatKhau", true, DataSourceUpdateMode.Never));
-           
+            cbVaiTro.DataBindings.Add(new Binding("Text", dgvTK.DataSource, "VaiTro", true, DataSourceUpdateMode.Never));
         }
+
+        
     }
 }

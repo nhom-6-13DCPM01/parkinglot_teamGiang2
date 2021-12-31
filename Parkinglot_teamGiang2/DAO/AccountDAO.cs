@@ -94,7 +94,7 @@ namespace QLBaiGiuXe.DAO
 
             return list;
         }
-        public bool InsertAccount(string tenTaiKhoan, string tenNhanVien, string matKhau, string vaiTro)
+        public bool InsertAccount(string tenTaiKhoan, string tenNhanVien, string matKhau, bool vaiTro)
         {
             string query = string.Format("INSERT dbo.Account ( tenTaiKhoan, tenNhanVien, matKhau ,vaiTro )VALUES  ( N'{0}', N'{1}','{2}' ,{3})", tenTaiKhoan, tenNhanVien, matKhau, vaiTro);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
@@ -102,7 +102,7 @@ namespace QLBaiGiuXe.DAO
             return result > 0;
         }
 
-        public bool UpdateAccount(string tenTaiKhoan, string tenNhanVien, string matkhau, string vaiTro)
+        public bool UpdateAccount(string tenTaiKhoan, string tenNhanVien, string matkhau, bool vaiTro)
         {
             string query = string.Format("UPDATE dbo.Account SET tenNhanVien = N'{1}', vaiTro = {2} , matKhau = '{3}' WHERE tenTaiKhoan = N'{0}'", tenTaiKhoan, tenNhanVien, vaiTro, matkhau);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
