@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLBaiGiuXe.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,11 +19,12 @@ namespace QLBaiGiuXe
         private Random random;
         private int tempIndex;
         private Form activeForm;
-
+        private Account account;
         //Constructor
-        public fMainMenu()
+        public fMainMenu(Account account)
         {
             InitializeComponent();
+            this.account = account;
             random = new Random();
             btnCloseChildForm.Visible = false;
             this.Text = string.Empty;
@@ -93,7 +95,13 @@ namespace QLBaiGiuXe
         }
         private void fMainMenu_Load(object sender, EventArgs e)
         {
-
+            if(account.VaiTro == false)
+            {
+                btnTaiKhoan.Enabled = false;
+                btnQLBX.Enabled = false;
+                btnTaiKhoan.ForeColor = Color.Gray;
+                btnQLBX.ForeColor = Color.Gray;
+            }
         }
 
        

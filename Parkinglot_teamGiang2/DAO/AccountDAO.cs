@@ -60,14 +60,19 @@ namespace QLBaiGiuXe.DAO
             return null;
         }
 
-        public bool Login(string tenTaiKhoan, string matKhau)
+        public Account Login(string tenTaiKhoan, string matKhau)
         {
-            string query = "USP_Login @userName , @passWord";
-
-            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { tenTaiKhoan, matKhau });
-
-            return result.Rows.Count > 0;
+            string query = "USP_Login @userName , @passWord ";
+            Account account = null;
+            DataTable data = DataProvider.Instance.ExecuteQuery(query , new object[] { tenTaiKhoan , matKhau });
+            foreach (DataRow item in data.Rows)
+            {
+                account = new Account(item);
+                return account;
+            }
+            return account;
         }
+
         public DataTable GetListAccount()
         {
             return DataProvider.Instance.ExecuteQuery("SELECT tenTaiKhoan, tenNhanVien, vaiTro FROM dbo.Account");
