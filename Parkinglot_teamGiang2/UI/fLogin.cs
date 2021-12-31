@@ -23,10 +23,10 @@ namespace QLBaiGiuXe
         {
             string tenTaiKhoan = txtUsername.Text;
             string matKhau = txtPassword.Text;
-            if (Login(tenTaiKhoan, matKhau))
+            Account loginAccount = Login(tenTaiKhoan,matKhau);
+            if (loginAccount != null)
             {
-                Account loginAccount = AccountDAO.Instence.getAccount(tenTaiKhoan);
-                fMainMenu f = new fMainMenu();
+                fMainMenu f = new fMainMenu(loginAccount);
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
@@ -40,9 +40,9 @@ namespace QLBaiGiuXe
             }
         }
 
-        private bool Login(string tenTaiKhoan, string matKhau)
+        private Account Login(string tenTaiKhoan, string matKhau)
         {
-            throw new NotImplementedException();
+            return AccountDAO.Instence.Login(tenTaiKhoan, matKhau);
         }
     }
 }

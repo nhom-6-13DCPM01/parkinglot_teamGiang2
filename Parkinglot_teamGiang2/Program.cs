@@ -18,7 +18,7 @@ namespace Parkinglot_teamGiang2
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fMainMenu());
+            Application.Run(new fLogin());
         }
     }
 }

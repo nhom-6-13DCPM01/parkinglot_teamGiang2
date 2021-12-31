@@ -49,6 +49,7 @@ namespace Parkinglot_teamGiang2.ReportViewer
             this.ClientSize = new System.Drawing.Size(493, 418);
             this.Controls.Add(this.reportViewer1);
             this.Name = "ThanhToan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThanhToan";
             this.Load += new System.EventHandler(this.ThanhToan_Load);
             this.ResumeLayout(false);

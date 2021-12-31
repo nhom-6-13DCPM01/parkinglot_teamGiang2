@@ -36,10 +36,10 @@ namespace QLBaiGiuXe.DAO
             private set => instence = value;
         }
 
-        // Khóa hàm tạo
+        
         private DataProvider() { }
 
-        //Truy vấn trả về 1 Bảng
+        
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
@@ -69,7 +69,7 @@ namespace QLBaiGiuXe.DAO
             }
             return data;
         }
-        //Truy vấn không cần trả về
+        
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;
