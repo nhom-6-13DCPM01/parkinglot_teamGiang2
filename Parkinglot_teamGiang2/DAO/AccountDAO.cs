@@ -31,7 +31,6 @@ namespace QLBaiGiuXe.DAO
             set => instence = value;
         }
 
-        public static object Instance { get; internal set; }
 
         private AccountDAO() { }
 
@@ -48,9 +47,9 @@ namespace QLBaiGiuXe.DAO
             return list;
         }
         
-        public Account getAccount(string tenTaiKhoan)
+        public Account getAccount(int id)
         {
-            string query = "SELECT * FROM Account Where tenTaiKhoan = " + tenTaiKhoan;
+            string query = "SELECT * FROM Account Where id = " + id;
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
@@ -73,10 +72,6 @@ namespace QLBaiGiuXe.DAO
             return account;
         }
 
-        public DataTable GetListAccount()
-        {
-            return DataProvider.Instance.ExecuteQuery("SELECT tenTaiKhoan, tenNhanVien, vaiTro FROM dbo.Account");
-        }
 
         public List<Account> SearchAccountByName(string tenTaiKhoan)
         {
@@ -94,32 +89,32 @@ namespace QLBaiGiuXe.DAO
 
             return list;
         }
-        public bool InsertAccount(string tenTaiKhoan, string tenNhanVien, string matKhau, bool vaiTro)
+        public bool InsertAccount(Account account)
         {
-            string query = string.Format("INSERT dbo.Account ( tenTaiKhoan, tenNhanVien, matKhau ,vaiTro )VALUES  ( N'{0}', N'{1}','{2}' ,{3})", tenTaiKhoan, tenNhanVien, matKhau, vaiTro);
-            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            string query = "INSERT dbo.Account ( tenTaiKhoan, tenNhanVien, matKhau ,vaiTro )VALUES  ( @tenTaiKhoan , @tenNhanVien , @matKhau , @vaiTro )";
+            int result = DataProvider.Instance.ExecuteNonQuery(query , new object[] {account.TenTaiKhoan,account.TenNhanVien,account.MatKhau,account.VaiTro});
 
             return result > 0;
         }
 
-        public bool UpdateAccount(string tenTaiKhoan, string tenNhanVien, string matkhau, bool vaiTro)
+        public bool UpdateAccount(Account account)
         {
-            string query = string.Format("UPDATE dbo.Account SET tenNhanVien = N'{1}', vaiTro = {2} , matKhau = '{3}' WHERE tenTaiKhoan = N'{0}'", tenTaiKhoan, tenNhanVien, vaiTro, matkhau);
-            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            string query = "UPDATE Account SET tenTaiKhoan = @tenTaiKhoan , tenNhanVien = @tenNhanVien , vaiTro = @vaiTro , matKhau = @matKhau WHERE id = @id ";
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { account.TenTaiKhoan, account.TenNhanVien, account.VaiTro , account.MatKhau,  account.Id });
 
             return result > 0;
         }
         //
-        public bool DeleteAccount(string tenTaiKhoan)
+        public bool DeleteAccount(int id)
         {
-            string query = string.Format("Delete Account where tenTaiKhoan = N'{0}'", tenTaiKhoan);
+            string query = "Delete Account where id = "+ id;
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
-        public bool ResetPassword(string tenTaiKhoan)
+        public bool ResetPassword(int id)
         {
-            string query = string.Format("update account set matKhau = N'0' where tenTaiKhoan = N'{0}'", tenTaiKhoan);
+            string query = string.Format("update account set matKhau = N'0' where id = {0}", id);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
